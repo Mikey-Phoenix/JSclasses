@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title">
+        <h1>Title Element</h1>
+    </div>
+<!--  -->
+    <script>
+        let title = document.getElementById('title');
+        console.log(title.innerHTML);
+        const name = "qwertyu";
+        // title = "<!--Hello World! -->"
+        // title = "New Title";
+        // console.log(title);
+        document.getElementById('title').innerHTML = `<p>Welcome ${name}. You go cry!!!</p>`;
+        // title.style.fontSize = "15px"; 
+        // window.alert("hello world") 
+    </script>
+</body>
+</html> 

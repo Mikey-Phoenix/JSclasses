@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>wertyu</h1>
+    <button onClick="add()">ertyu</button>
+    <script>
+        // a=1; b=-2; c=1
+        function add(a, b) {
+            console.log(a+b)
+        }  // Math.sqrt
+
+        function quadratic (a,b,c){
+            let x = -b;
+            let y = b**2 - 4*a*c;
+            let z = 2*a
+            let quadratic = (x + Math.sqrt(y)) / z
+            
+            return(quadratic)
+        }
+        // let result = quadratic(1,-2,1)
+        // add(result, 1)
+
+        (() => {
+            console.log("fra")
+        })
+        // console.log("my answer is " + result)
+    </script>
+</body>
+</html>
