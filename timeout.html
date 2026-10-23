@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <button onclick="deleteStorage()">delete</button>
+
+    <script>
+        setTimeout(() => {
+            // document.querySelector("h1").style.cssText = "display: none"
+            document.querySelector("h1").textContent = localStorage.getItem("heading")
+        }, 2000);
+            
+        function deleteStorage() {
+            localStorage.removeItem("heading")
+        }
+        // toggle = "blue"
+        let toggle = false;
+        // setInterval(() => {
+        //     if (toggle == true) {
+        //         document.querySelector("h1").style.cssText = "display: block; color: #ff9890"
+        //         toggle = !toggle;
+        //     } else {
+        //         document.querySelector("h1").style.cssText = "display: none"
+        //         toggle = !toggle;
+        //     }
+        // }, 500)
+
+        localStorage.setItem("heading", "Thank You!")
+    </script>
+</body>
+</html>
