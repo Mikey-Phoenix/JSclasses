@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h2 style="margin-top: 100px;">Count Down</h2>
+    <input style="margin-bottom: 10px;" type="number" name="" id="">
+    <h1>0</h1>
+    <div>
+        <button>Play</button>
+        <button>Reset</button>
+    </div>
+
+    <script>
+        const input = document.querySelector("input");
+        const number = document.querySelector("h1");
+        const btns = Array.from(document.querySelectorAll('button'));
+        const playPause = btns[0];
+        const reset = btns[1];
+        let toggle = false ;// 0
+        let counting;
+
+        function count() {
+            if (input.value == 0 || input.value == null) {
+                // number.innerHTML = number.innerHTML
+                if (parseInt(number.innerHTML) > 0) {
+                    number.innerHTML = parseInt(number.innerHTML) - 1;
+                } else {
+                    clearInterval(counting)
+                }
+            } else {
+                number.innerHTML = input.value;
+                input.value = null;
+            }
+            console.log("counting", input.value)
+        }
+
+        playPause.addEventListener("click", ()=>{
+            if (toggle) { // 1
+                playPause.innerHTML = "Play";
+                toggle = false;
+            } else { // 0
+                playPause.innerHTML = "Pause";
+                // count()
+                counting = setInterval(() => {count()}, 1000);
+                toggle = true;
+            }
+        })
+
+        // console.log(input, playPause, reset)
+    </script>
+</body>
+</html>
