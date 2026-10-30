@@ -35,12 +35,13 @@
                 number.innerHTML = input.value;
                 input.value = null;
             }
-            console.log("counting", input.value)
+            // console.log("counting", input.value)
         }
 
         playPause.addEventListener("click", ()=>{
             if (toggle) { // 1
                 playPause.innerHTML = "Play";
+                clearInterval(counting);
                 toggle = false;
             } else { // 0
                 playPause.innerHTML = "Pause";
@@ -49,7 +50,13 @@
                 toggle = true;
             }
         })
-
+        
+        reset.addEventListener("click", ()=>{
+            toggle = false;
+            playPause.innerHTML = "Play";
+            number.innerHTML = 0;
+            clearInterval(counting);
+        })
         // console.log(input, playPause, reset)
     </script>
 </body>
